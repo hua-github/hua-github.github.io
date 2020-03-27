@@ -1,34 +1,27 @@
+
+
+  
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <title>MyHtml.html</title>
-	
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="this is my page">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    
-    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
-
-  </head>
-  
-  <body>
-<script type="text/javascript"></script>
-
-<script>
-var v;
-
-function my() {
-    
-    v = setTimeout(f, 3000);
+ <head>
+<script type="text/javascript">
+function formSubmit()
+{
+document.forms["myForm"].submit();
 }
-
-function f() {
- document.getElementById("d").innerHTML=Date();
-}
-
 </script>
-<button type="button" onclick="my()">点我</button>
-<p id="d">点击按钮，3 秒后会弹出 "当天时间"。</p>
-  </body>
-</html>
+</head>
 
+<body>
+
+<form name="myForm" action="MyHtml.html" method="get">
+  First name: <input type="text" name="fname" /><br />
+  Last name: <input type="text" name="lname" /><br />
+  <input type="button" onclick="formSubmit()" value="Send form data!" />
+</form>
+
+<p>请单击确认按钮，输入会发送到服务器上名为 "form_action.asp" 的页面。</p>
+
+</body>
+</html>
