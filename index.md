@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>h.html</title>
+    <title>MyHtml.html</title>
 	
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="this is my page">
@@ -12,30 +12,23 @@
   </head>
   
   <body>
-   <script>
-   var c=0;
-   var x=0;
-   var t;
-   function timedCount(){
-   	document.getElementById("txt").value=c;
-   	c=c+1;
-    	t=setTimeout(timedCount,1000);
-   }
-   function doTimer(){
-   	if (!x){
-   		x=1;
-   		document.getElementById("txt").innerHTML=timedCount();
-   	}
-   }
-   function stopCount(){
-   	clearTimeout(t);
-      	x=0;
-   }
-   </script>
-   
-   <input type="button" value="开始计数!" onclick="doTimer()" />
-   <input type="text" id="txt" />
-   <input type="button" value="停止计数!" onclick="stopCount()" />
+<script type="text/javascript"></script>
 
+<script>
+var v;
+
+function my() {
+    
+    v = setTimeout(f, 3000);
+}
+
+function f() {
+ document.getElementById("d").innerHTML=Date();
+}
+
+</script>
+<button type="button" onclick="my()">点我</button>
+<p id="d">点击按钮，3 秒后会弹出 "当天时间"。</p>
   </body>
 </html>
+
